@@ -1,4 +1,4 @@
-#connectedness and components in a graph
+#connectedness and components in an undirected graph
 
 from collections import defaultdict
 import numpy as np
@@ -28,12 +28,13 @@ n=int(raw_input("Enter number of nodes: "))
 for i in range (1,n+1):
 	data=map(int,raw_input("Enter nodes to which "+str(i)+" is connected: ").split())
 	if len(data)==0:
-			graph[i]=set()
+		if graph[i]==set():
+			continue
 	else:
 		for j in data:
 			graph[i].append(j)
-
+			graph[j].append(i)
 result=getAllConnectedGroups(graph)
-print "The components are: \n"
+print "\nThe components are:"
 for comp in result:
 	print comp
