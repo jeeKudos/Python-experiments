@@ -1,3 +1,5 @@
+#connectedness and components in a graph
+
 from collections import defaultdict
 import numpy as np
 def getAllConnectedGroups(graph):
@@ -32,5 +34,6 @@ for i in range (1,n+1):
 			graph[i].append(j)
 
 result=getAllConnectedGroups(graph)
+print "The components are: \n"
 for comp in result:
 	print comp

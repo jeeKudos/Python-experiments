@@ -1,5 +1,5 @@
 #program for implementation of heap sort in python
-                
+
 def heapsort(A):
     n=len(A)
     for i in range(n-1,-1,-1):

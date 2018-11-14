@@ -1,3 +1,5 @@
+#shortest path problem for evacuation routes during flood based on water level
+
 from collections import defaultdict
 
 class Graph():
@@ -14,7 +16,6 @@ edges=[('Vellayambalam','Kowdiar',2),('Kowdiar','Museum',3),('Museum','Thampanoo
 
 for edge in edges:
         graph.addEdge(*edge)
-#print graph.edges
 
 def dijsktra(graph,initial,end):
 	sp={initial:(None,0)}
